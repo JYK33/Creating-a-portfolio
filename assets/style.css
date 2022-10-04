@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #9e9df0;
+    --secondary: maroon;
+    --tertiary: navajowhite;
+    --dark: black;
+    --light: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--secondary);
+    background-color: var(--tertiary);
+    line-height: 1.5;
+}
+
+h1
+h2
+h3
+h4
+h5
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+header {
+    padding: 15px 6% 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--tertiary);
+    box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
+
+}
+
+header h1 {
+    color: var(--tertiary);
+    background-color: var(--secondary);
+    padding: 1px 1% 5px 6%;
+    margin: 0;
+    line-height: 1;
+    font-size: xxx-large;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration:solid;
+    padding: 15px 15px;
+    color: var(--secondary);
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-size: 100% 0,2em;
+    background-position: bottom;
+    transition: all , 10s, ease-in;
+    font-size: x-large; 
+}
+
+nav a:hover {
+    background-size: 100% 100%;
+    color: var(--primary);
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+main {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.hero {
+    /* background:rgb(89, 66, 110); */
+    background: var(--secondary);
+    background-image: url(./images/clouds.jpg), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+    /* background-size: cover; */
+    background-position: center;
+    background-blend-mode:lighten;
+    min-height: 30vh;
+    color: var(--light);
+    padding: 2% 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.hero div {
+    flex: 0 0 90%;
+}
+
+.hero h2 {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    margin: 0;
+    padding: 5px 10px;
+    font-size: x-large;
+    line-height: 1.2;
+    display: inline;
+
+}
+
+.page-wrapper {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-section {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.page-section > h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid var(--dark);
+    font-size: x-large;
+    line-height: 1.1;
+}
+
+.page-section > div {
+    flex: 0 0 77%
+}
+
+.page-section p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-item {
+    border: 5px solid var(--secondary);
+    background-color: var(--primary);
+    color: var(--tertiary);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    
+}
+
