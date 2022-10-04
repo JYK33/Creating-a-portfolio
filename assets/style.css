@@ -7,7 +7,7 @@
 :root {
     --primary: #9e9df0;
     --secondary: maroon;
-    --tertiary: navajowhite;
+    --tertiary: rgba(255, 222, 173, 0.911);
     --dark: black;
     --light: white;
 }
@@ -16,26 +16,26 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
     color: var(--secondary);
     background-color: var(--tertiary);
     line-height: 1.5;
 }
 
-h1
+/* h1
 h2
 h3
 h4
 h5
 h6 {
     margin: 0;
-}
+} */
 
 p {
-    margin: 0;
+    margin: 25px;
 }
 
-/* This section targets the header */
+/* This section formats the header*/
 header {
     padding: 15px 6% 15px 0;
     display: flex;
@@ -48,36 +48,42 @@ header {
 
 }
 
+/* this section targets the h1 inside the header */
 header h1 {
     color: var(--tertiary);
     background-color: var(--secondary);
-    padding: 1px 1% 5px 6%;
+    padding: 5px 1% 5px 6%;
     margin: 0;
     line-height: 1;
-    font-size: xxx-large;
+    font-size: 4vw;
 }
 
+/* formatting the nav bar */
 nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    /* position: relative; */
 }
 
+/* this section targets the anchor tags in the nav */
 nav a {
-    text-decoration:solid;
-    padding: 15px 15px;
+    text-decoration:none;
+    padding: 5px 10px;
     color: var(--secondary);
-    margin-right: 15px;
+    margin-right: 10px;
+    background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
     background-repeat: no-repeat;
     background-size: 100% 0,2em;
-    background-position: bottom;
-    transition: all , 10s, ease-in;
-    font-size: x-large; 
+    background-position:top;
+    transition: all .25s ease-in;
+    font-size: 1.4rem; 
 }
 
+/* changes the color of the text when hovering */
 nav a:hover {
     background-size: 100% 100%;
-    color: var(--primary);
+    color: var(--light);
 }
 
 nav a:last-child {
@@ -90,12 +96,12 @@ main {
 }
 
 .hero {
-    /* background:rgb(89, 66, 110); */
+    background:rgb(89, 66, 110);
     background: var(--secondary);
-    background-image: url(./images/clouds.jpg), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
-    /* background-size: cover; */
-    background-position: center;
-    background-blend-mode:lighten;
+    background-image: url(../assets/images/clouds.jpg), linear-gradient(180deg, var(--primary) 0%, var(--primary) 100%);
+    background-size: cover;
+    background-position: right center;
+    /* background-blend-mode:lighten; */
     min-height: 30vh;
     color: var(--light);
     padding: 2% 6%;
@@ -114,7 +120,7 @@ main {
     color: var(--tertiary);
     margin: 0;
     padding: 5px 10px;
-    font-size: x-large;
+    font-size: 2.3rem;
     line-height: 1.2;
     display: inline;
 
@@ -140,19 +146,17 @@ main {
     flex: 0 0 20%;
     text-align: right;
     padding-right: 15px;
-    border-right: 4px solid var(--dark);
-    font-size: x-large;
+    border-right: 5px solid var(--dark);
+    font-size: 4vw;
     line-height: 1.1;
 }
 
 .page-section > div {
-    flex: 0 0 77%
+    flex: 0 0 77%;
 }
 
 .page-section p {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .flex-container {
@@ -164,7 +168,7 @@ main {
 
 .flex-item {
     border: 5px solid var(--secondary);
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
     color: var(--tertiary);
     min-height: 150px;
     max-height: 150px;
@@ -181,13 +185,13 @@ main {
 }
 
 /* first portfolio item */
-.flex-container:first-child {
+.flex-item:first-child {
     min-height: 400px;
     flex-basis: 100%;
 }
 
 .flex-item:hover {
-    background-color: 0, 0, 0, 0.3;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .flex-item div {
@@ -196,7 +200,7 @@ main {
 }
 
 .flex-item h3 {
-    font-size: x-large;
+    font-size: 1.6rem;
 }
 
 .contact address {
@@ -211,9 +215,9 @@ main {
     color: var(--secondary);
     padding: 5px;
     text-decoration: none;
-    font-size: larger;
+    font-size: 1.3rem;
     font-style: normal;
-    background-image: linear-gradient(270deg, var(--dark) 0%, var(--dark) 100%);
+    background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: bottom;
@@ -224,10 +228,82 @@ main {
 
 .contact address a:hover {
     background-size: 100% 88%;
-    color: var(--secondary);
+    color: var(--light);
 }
 
 /* portfolio project images */
-.run-buddy {
-    
+.pre-work {
+    background-image: url(../assets/images/korean-island.jpg);
+    background-position: center; 
+}
+
+.project5 {
+    background-image: url(../assets/images/vietnam.jpg);
+    background-position: center;
+}
+
+.code-refactoring {
+    background-image: url(../assets/images/big-sur.jpg);
+    background-position: center;
+}
+
+.project3 {
+    background-image: url(../assets/images/bahamas.jpg);
+    background-position: right;
+}
+
+.project4 {
+    background-image: url(../assets/images/korean-port.jpg);
+    background-position: left bottom;
+}
+
+
+/* end portfolio project images */
+
+@media screen and (max-width:980px) {
+    header {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+    }   
+
+    header h1 {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 10vw;
+    }
+    header nav {
+        justify-content: center;
+    }
+    .page-section > h2,
+    .page-section > div {
+        flex: 0 0 100%;
+    }
+    .page-section > h2 {
+        border-right: none;
+        border-bottom: 4px solid var(--secondary);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        text-align: left;
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flex-item,
+    .flex-item:first-child {
+        flex-basis: 100%;
+    }
+    .flex-item:first-child {
+        min-height: 150px;
+    }
+    .hero {
+        justify-content: center;
+        text-align: center;
+    }
+    .contact address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
