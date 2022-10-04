@@ -1,7 +1,9 @@
+/* universal */
 * {
     box-sizing: border-box;
 }
 
+/* colors for the portfolio  */
 :root {
     --primary: #9e9df0;
     --secondary: maroon;
@@ -10,6 +12,7 @@
     --light: white;
 }
 
+/* This section targets everything in the body */
 body {
     margin: 0;
     padding: 0;
@@ -32,6 +35,7 @@ p {
     margin: 0;
 }
 
+/* This section targets the header */
 header {
     padding: 15px 6% 15px 0;
     display: flex;
@@ -151,6 +155,13 @@ main {
     justify-content: center;
 }
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
 .flex-item {
     border: 5px solid var(--secondary);
     background-color: var(--primary);
@@ -162,6 +173,61 @@ main {
     align-items: flex-end;
     padding: 0 0 20px 0;
     margin: 0.5em;
-    
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.9rem;
 }
 
+/* first portfolio item */
+.flex-container:first-child {
+    min-height: 400px;
+    flex-basis: 100%;
+}
+
+.flex-item:hover {
+    background-color: 0, 0, 0, 0.3;
+}
+
+.flex-item div {
+    background-color: var(--secondary);
+    padding: 8px 10px;
+}
+
+.flex-item h3 {
+    font-size: x-large;
+}
+
+.contact address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.contact address a {
+    color: var(--secondary);
+    padding: 5px;
+    text-decoration: none;
+    font-size: larger;
+    font-style: normal;
+    background-image: linear-gradient(270deg, var(--dark) 0%, var(--dark) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    transition: all .25s ease-in;
+    margin: 0 0.2rem 0.1rem;
+    display: inline-block;
+}
+
+.contact address a:hover {
+    background-size: 100% 88%;
+    color: var(--secondary);
+}
+
+/* portfolio project images */
+.run-buddy {
+    
+}
