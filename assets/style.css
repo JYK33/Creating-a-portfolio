@@ -5,10 +5,12 @@
 
 /* colors for the portfolio  */
 :root {
-    --primary: #9e9df0;
-    --secondary: maroon;
-    --tertiary: rgba(255, 222, 173, 0.911);
-    --dark: black;
+    --primary: chocolate;
+    --secondary: rgba(255, 222, 173, 0.911);
+    --tertiary: darkolivegreen;
+    /* --secondary: maroon;
+    --tertiary: rgba(255, 222, 173, 0.911); */
+    --dark: chocolate;
     --light: white;
 }
 
@@ -21,15 +23,10 @@ body {
     background-color: var(--tertiary);
     line-height: 1.5;
 }
-
-/* h1
-h2
-h3
-h4
-h5
-h6 {
-    margin: 0;
-} */
+/* add colors to hyperlinks, maybe try to get rid of underlying 👀 */
+a:link {
+    color: var(--);
+}
 
 p {
     margin: 25px;
@@ -50,34 +47,42 @@ header {
 
 /* this section targets the h1 inside the header */
 header h1 {
-    color: var(--tertiary);
-    background-color: var(--secondary);
+    color: var(--secondary);
+    background-color: var(--primary);
     padding: 5px 1% 5px 6%;
     margin: 0;
     line-height: 1;
     font-size: 4vw;
 }
-
+header img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 90%;
+    border: 3px solid;
+    background-color: var(--primary);
+      /*👆 this changes the background color of avatar*/
+}
 /* formatting the nav bar */
 nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* position: relative; */
 }
 
 /* this section targets the anchor tags in the nav */
 nav a {
-    text-decoration:none;
+    text-decoration:double;
     padding: 5px 10px;
     color: var(--secondary);
     margin-right: 10px;
-    background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
+    background-image: linear-gradient(270deg, var(--tertiary) 0%, var(--secondary) 100%);
+    /* 👆 this changes the cooler of the nav links and makes it gradient */
     background-repeat: no-repeat;
     background-size: 100% 0,2em;
     background-position:top;
     transition: all .25s ease-in;
     font-size: 1.4rem; 
+    border-radius: 30px;
 }
 
 /* changes the color of the text when hovering */
@@ -101,7 +106,6 @@ main {
     background-image: url(../assets/images/clouds.jpg), linear-gradient(180deg, var(--primary) 0%, var(--primary) 100%);
     background-size: cover;
     background-position: right center;
-    /* background-blend-mode:lighten; */
     min-height: 30vh;
     color: var(--light);
     padding: 2% 6%;
@@ -146,7 +150,8 @@ main {
     flex: 0 0 20%;
     text-align: right;
     padding-right: 15px;
-    border-right: 5px solid var(--dark);
+    border-right: 4px solid var(--dark);
+    height: auto;
     font-size: 4vw;
     line-height: 1.1;
 }
@@ -167,8 +172,8 @@ main {
 
 
 .flex-item {
-    border: 5px solid var(--secondary);
-    /* background-color: var(--primary); */
+    border: 5px solid;
+    background-color: var(--primary);
     color: var(--tertiary);
     min-height: 150px;
     max-height: 150px;
@@ -178,10 +183,12 @@ main {
     padding: 0 0 20px 0;
     margin: 0.5em;
     text-decoration: none;
-    background-blend-mode: soft-light;
     background-size: 150%;
     transition: all 0.5s;
     font-size: 0.9rem;
+}
+span {
+    align-items: center;
 }
 
 /* first portfolio item */
@@ -192,17 +199,21 @@ main {
 
 .flex-item:hover {
     background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 35px;
+    /* 👆 this makes the borders round when i hover over the project images */
 }
 
 .flex-item div {
     background-color: var(--secondary);
-    padding: 8px 10px;
+    padding: 4px 10px;
+
 }
 
 .flex-item h3 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
+/* this section targets the contact me  */
 .contact address {
     display: flex;
     flex-wrap: wrap;
@@ -213,17 +224,18 @@ main {
 
 .contact address a {
     color: var(--secondary);
-    padding: 5px;
+    padding: 10px;
     text-decoration: none;
     font-size: 1.3rem;
     font-style: normal;
-    background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
+    background-image: linear-gradient(270deg, var(--tertiary) 0%, var(--secondary) 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
-    background-position: bottom;
+    background-position: top;
     transition: all .25s ease-in;
     margin: 0 0.2rem 0.1rem;
     display: inline-block;
+    border-radius: 35px;
 }
 
 .contact address a:hover {
