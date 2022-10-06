@@ -8,8 +8,6 @@
     --primary: lightskyblue;
     --secondary: black;
     --tertiary:dimgray;
-    /* --secondary: maroon;
-    --tertiary: rgba(255, 222, 173, 0.911); */
     --dark: black;
     --light: white;
 }
@@ -18,13 +16,12 @@
 body {
     margin: 0;
     padding: 0;
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: var(--secondary);
     background-color: var(--tertiary);
     line-height: 1.5;
 }
-/* add colors to hyperlinks, maybe try to get rid of underlying 👀 */
+
 a:link {
     color: var(--);
 }
@@ -49,7 +46,6 @@ header {
 /* this section targets the h1 inside the header */
 header h1 {
     color: var(--secondary);
-    /* background-color: var(--primary); */
     padding: 5px 1% 5px 6%;
     margin: 0;
     line-height: 1;
@@ -276,7 +272,7 @@ span {
 }
 
 
-/* end portfolio project images */
+/* This section targets the format of the website as it shrinks */
 
 @media screen and (max-width:980px) {
     header {
