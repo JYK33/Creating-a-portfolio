@@ -5,9 +5,9 @@
 
 /* colors for the portfolio  */
 :root {
-    --primary: lightblue;
+    --primary: steelblue;
     --secondary: black;
-    --tertiary:lightslategray;
+    --tertiary:silver;
     --dark: black;
     --light: white;
 }
@@ -99,7 +99,7 @@ main {
 .hero {
     background:rgb(89, 66, 110);
     background: var(--secondary);
-    background-image: url(../assets/images/clouds.jpg), linear-gradient(180deg, var(--primary) 0%, var(--primary) 100%);
+    background-image: url(../assets/images/newyork.jpg), linear-gradient(180deg, var(--primary) 0%, var(--primary) 100%);
     background-size:cover;
     background-position: right center;
     min-height: 35vh;
@@ -116,8 +116,8 @@ main {
 }
 
 .hero h2 {
-    /* background-color: var(--secondary); */
-    color: var(--secondary);
+    background-color: var(--secondary);
+    color: var(--light);
     margin: 0;
     padding: 5px 10px;
     font-size: 2.3rem;
