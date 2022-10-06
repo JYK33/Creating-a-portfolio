@@ -72,7 +72,6 @@ nav a {
     padding: 5px 10px;
     color: var(--secondary);
     margin-right: 10px;
-    */
     /* 👆 this changes the cooler of the nav links and makes it gradient */
     background-repeat: no-repeat;
     background-size: 100% 0,2em;
@@ -229,15 +228,15 @@ span {
     padding: 10px;
     color: var(--secondary);
     margin: 0 0.2rem 0.1rem;
+    font-size: 1.3rem;
+    font-style: normal;
+    display: inline-block;
     /* background-image: linear-gradient(270deg, var(--tertiary) 0%, var(--secondary) 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: bottom;
-    transition: all .25s ease-in; */
-    font-size: 1.3rem;
-    border-radius: 35px;
-    font-style: normal;
-    display: inline-block;
+    transition: all .25s ease-in;
+    border-radius: 25px; */
 }
 
 .contact address a:hover {
